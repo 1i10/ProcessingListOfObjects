@@ -7,7 +7,7 @@ Comparator TypeGroupingStrategy::getComparator()
 	return Comparator(SortingCriterion::Name, this->sortDirection);
 }
 
-void TypeGroupingStrategy::groupObjects(std::vector<Object> objects, std::vector<Group>& groups)
+void TypeGroupingStrategy::groupObjects(const std::vector<Object>& objects, std::vector<Group>& groups)
 {
     Group* typeGroup = findGroupByName(groups, "Тип");
 

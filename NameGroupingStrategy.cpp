@@ -6,7 +6,7 @@ Comparator NameGroupingStrategy::getComparator()
     return Comparator(SortingCriterion::Name, this->sortDirection);
 }
 
-void NameGroupingStrategy::groupObjects(std::vector<Object> objects, std::vector<Group>& groups)
+void NameGroupingStrategy::groupObjects(const std::vector<Object>& objects, std::vector<Group>& groups)
 {
     Group* nameGroup = findGroupByName(groups, "Имя");
 

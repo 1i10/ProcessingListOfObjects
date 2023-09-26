@@ -24,9 +24,9 @@ private:
     std::function<float(float, float)> calculateDistance;
 public:
     Comparator() = default;
-    Comparator(SortingCriterion sortingCriterion, SortDirection sortDirection)
+    Comparator(const SortingCriterion& sortingCriterion, const SortDirection& sortDirection)
         : sortingCriterion(sortingCriterion), sortDirection(sortDirection), calculateDistance(nullptr) {}
-    Comparator(SortingCriterion sortingCriterion, SortDirection sortDirection, std::function<float(float, float)> calculateDistanceFunc)
+    Comparator(const SortingCriterion& sortingCriterion, const SortDirection& sortDirection, std::function<float(float, float)> calculateDistanceFunc)
         : sortingCriterion(sortingCriterion), sortDirection(sortDirection), calculateDistance(calculateDistanceFunc) {}
 
     bool operator()(const Object& obj1, const Object& obj2) const;

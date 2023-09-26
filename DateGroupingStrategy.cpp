@@ -5,7 +5,7 @@ Comparator DateGroupingStrategy::getComparator()
     return Comparator(SortingCriterion::Date, this->sortDirection);
 }
 
-void DateGroupingStrategy::groupObjects(std::vector<Object> objects, std::vector<Group> &groups)
+void DateGroupingStrategy::groupObjects(const std::vector<Object>& objects, std::vector<Group>& groups)
 {
     Group* dateGroup = findGroupByName(groups, "Дата создания");
 

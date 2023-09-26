@@ -9,9 +9,9 @@ private:
     std::multiset<Object, Comparator> objects;
     Comparator comparator;
 public:
-    Subgroup(Comparator comparator) : comparator(comparator), objects(comparator) {}
+    Subgroup(const Comparator& comparator) : comparator(comparator), objects(comparator) {}
 
-    void addObject(Object object);
+    void addObject(const Object& object);
     std::multiset<Object, Comparator> getObjects() { return objects; }
 };
 

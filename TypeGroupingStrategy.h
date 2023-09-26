@@ -10,6 +10,6 @@ public:
     TypeGroupingStrategy(int minNumber):minimumNumberOfTypeObjects(minNumber) {}
 
     Comparator getComparator() override;
-    void groupObjects(std::vector<Object> objects, std::vector<Group>& groups) override;
+    void groupObjects(const std::vector<Object>& objects, std::vector<Group>& groups) override;
 };
 

@@ -1,6 +1,6 @@
 ﻿#include "Group.h"
 
-void Group::addSubgroup(std::string subgroupName, Comparator comparator)
+void Group::addSubgroup(const std::string& subgroupName, Comparator comparator)
 {
     subgroups.emplace(subgroupName, Subgroup(comparator));
 }
@@ -10,7 +10,7 @@ void Group::clearSubgroups()
     this->subgroups.clear();
 }
 
-Subgroup* Group::getSubgroup(std::string subgroupName)
+Subgroup* Group::getSubgroup(const std::string& subgroupName)
 {
     // Проверяем, есть ли такая подгруппа
     auto it = subgroups.find(subgroupName);

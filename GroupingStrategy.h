@@ -12,12 +12,12 @@ protected:
 public:
     GroupingStrategy() : sortDirection(SortDirection::Ascending) {}
 
-    virtual void groupObjects(std::vector<Object> objects, std::vector<Group>& groups) = 0;
+    virtual void groupObjects(const std::vector<Object>& objects, std::vector<Group>& groups) = 0;
     virtual Comparator getComparator() = 0;
     virtual ~GroupingStrategy() {}
 
-    void setSortDirection(SortDirection direction);
+    void setSortDirection(const SortDirection& direction);
 
-    Group* findGroupByName(std::vector<Group>& groups, std::string groupName);
+    Group* findGroupByName(std::vector<Group>& groups, const std::string& groupName);
 };
 

@@ -9,12 +9,12 @@ private:
     std::string name;
     std::unordered_map<std::string, Subgroup> subgroups;
 public:
-    Group(std::string name) :name(name) {}
+    Group(const std::string& name) :name(name) {}
 
-    void addSubgroup(std::string subgroupName, Comparator comparator);
+    void addSubgroup(const std::string& subgroupName, Comparator comparator);
     void clearSubgroups();
 
-    Subgroup *getSubgroup(std::string subgroupName);
+    Subgroup *getSubgroup(const std::string& subgroupName);
     std::unordered_map<std::string, Subgroup> getSubgroups(){return subgroups;}
     std::string getName() { return name; };
 };

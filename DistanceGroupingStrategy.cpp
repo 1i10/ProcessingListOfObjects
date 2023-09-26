@@ -12,7 +12,7 @@ Comparator DistanceGroupingStrategy::getComparator()
     return Comparator(SortingCriterion::Distance, this->sortDirection, calculateDistanceFunc);
 }
 
-void DistanceGroupingStrategy::groupObjects(std::vector<Object> objects, std::vector<Group>& groups)
+void DistanceGroupingStrategy::groupObjects(const std::vector<Object>& objects, std::vector<Group>& groups)
 {
     Group* distanceGroup = findGroupByName(groups, "Расстояние");
 

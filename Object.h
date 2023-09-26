@@ -11,7 +11,7 @@ private:
 	std::string type;
     QDateTime createDate;
 public:
-    Object(std::string name, float x, float y, std::string type, QDateTime date)
+    Object(const std::string& name, float x, float y, const std::string& type, const QDateTime& date)
         :name(name), coordinateX(x), coordinateY(y), type(type), createDate(date){}
 
 	std::string getName() const { return name; };
